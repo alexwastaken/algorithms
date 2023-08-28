@@ -5,15 +5,15 @@ function sort(arr) {
         let outerEl = resultArray[outer];
 
         for (let inner = outer + 1; inner < resultArray.length; inner++){
+            
             let innerEl = resultArray[inner];
 
-            // [2,1] => [1,2]
             if (outerEl > innerEl) {
                 resultArray[outer] = innerEl;
                 resultArray[inner] = outerEl;
 
                 outerEl = resultArray[outer];
-                innerEl = resultArray[inner];
+
             }
         }
     }
