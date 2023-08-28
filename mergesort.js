@@ -19,19 +19,30 @@ function sort(arr) {
     let rightArrIndex = 0
 
     while (leftArrIndex < leftSortedArray.length || rightArrIndex < rightSortedArray.length) {
-        
+
+        console.log(mergedArr, 'merge array')
+        console.log(leftSortedArray, rightSortedArray, 'these are the two arrays')
+
         if (leftArrIndex >= leftSortedArray.length || leftSortedArray[leftArrIndex] > rightSortedArray[rightArrIndex]) {
+
+            console.log(leftSortedArray, rightSortedArray, leftArrIndex, rightArrIndex, 'right element added but these are the two arrays being looked at')
+            console.log(rightSortedArray[rightArrIndex], 'this is being pushed R')
             mergedArr.push(rightSortedArray[rightArrIndex]);
             rightArrIndex++;
+            
         } else {
+            console.log(leftSortedArray, rightSortedArray, 'left element added but these are the two arrays being looked at')
+            console.log(leftSortedArray[leftArrIndex], 'this is being pushed L')
             mergedArr.push(leftSortedArray[leftArrIndex]);
             leftArrIndex++;
         }
     }
 
+    console.log(mergedArr, 'merge array')
+
     return mergedArr
 
 }
 
-const sortedArray = sort([-10, 33, 5, 10, 3, -19, -99, 100]);
+const sortedArray = sort([-10, 33, 5, 10, 99]);
 console.log(sortedArray);
