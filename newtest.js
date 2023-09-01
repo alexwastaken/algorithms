@@ -5,4 +5,4 @@ function fact(number) {
     return number * fact(number-1);
 }
 
-console.log(fact(3))
+console.log(fact(4))
